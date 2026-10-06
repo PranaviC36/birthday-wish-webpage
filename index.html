@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy 17th Birthday ✨</title>
+    <style>
+        * { margin:0; padding:0; box-sizing:border-box; }
+        html, body { height:100%; }
+        body {
+            font-family: 'Poppins', 'Segoe UI', sans-serif;
+            background: linear-gradient(135deg, #fdf2f8 0%, #fce7f3 18%, #f3e8ff 38%, #e0f2fe 60%, #fdf2f8 100%);
+            background-size: 200% 200%;
+            animation: bgShift 15s ease infinite;
+            color:#5c3656;
+            overflow-x:hidden;
+        }
+        @keyframes bgShift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .floating {
+            position: fixed; inset:0; pointer-events:none; z-index:0;
+        }
+        .float-heart, .sparkle {
+            position:absolute; opacity:0.7; animation: floatUp 7s ease-in-out infinite;
+        }
+        .float-heart { font-size:2.2rem; }
+        .sparkle { font-size:1.4rem; animation: twinkle 3s ease-in-out infinite; }
+        @keyframes floatUp {
+            0%, 100% { transform: translateY(0) rotate(0deg); opacity:0.35; }
+            50% { transform: translateY(-30px) rotate(12deg); opacity:0.8; }
+        }
+        @keyframes twinkle {
+            0%, 100% { transform:scale(1); opacity:0.25; }
+            50% { transform:scale(1.4); opacity:0.9; }
+        }
+
+        .wrap {
+            position:relative; z-index:1; min-height:100vh; display:flex; align-items:center; justify-content:center; padding:36px 18px;
+        }
+        .card {
+            width:min(860px, 100%);
+            background: rgba(255,255,255,0.65);
+            border: 1px solid rgba(255,255,255,0.7);
+            backdrop-filter: blur(12px);
+            border-radius: 28px;
+            box-shadow: 0 28px 80px rgba(165, 94, 138, 0.18);
+            padding: 44px 28px;
+            animation: appear 1.2s ease-out both;
+        }
+        @keyframes appear {
+            from { opacity:0; transform:translateY(28px); }
+            to { opacity:1; transform:translateY(0); }
+        }
+
+        .title {
+            text-align:center; margin-bottom:24px;
+        }
+        .title h1 {
+            font-size: clamp(2.5rem, 5vw, 4.1rem);
+            background: linear-gradient(135deg, #ff7eb6, #c084fc, #7dd3fc); 
+            -webkit-background-clip: text; background-clip:text; color: transparent;
+            font-weight:800; letter-spacing:-1px;
+            text-shadow: 0 10px 30px rgba(255, 126, 182, 0.25);
+            animation: pulse 2.5s ease-in-out infinite;
+        }
+        @keyframes pulse {
+            0%,100% { transform: scale(1); }
+            50% { transform: scale(1.03); }
+        }
+        .title p {
+            margin-top:10px; font-size:1.1rem; color:#a35d8a; font-style:italic;
+        }
+        .celebrate {
+            text-align:center; font-size:2rem; margin:8px 0 20px; animation:bounce 2.2s ease-in-out infinite;
+        }
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-8px); }
+        }
+
+        .message {
+            margin-top:28px; background: rgba(255,255,255,0.32);
+            border-left: 5px solid #d8a4d5;
+            border-radius: 18px;
+            padding: 18px 20px;
+            box-shadow: inset 0 0 0 1px rgba(255,255,255,0.2);
+            animation: reveal 0.9s ease-out both;
+        }
+        .message:nth-child(2) { animation-delay: 0.15s; }
+        .message:nth-child(3) { animation-delay: 0.3s; }
+        .message:nth-child(4) { animation-delay: 0.45s; }
+        .message:nth-child(5) { animation-delay: 0.6s; }
+        .message:nth-child(6) { animation-delay: 0.75s; }
+        .message:nth-child(7) { animation-delay: 0.9s; }
+        @keyframes reveal {
+            from { opacity:0; transform:translateX(-15px); }
+            to { opacity:1; transform:translateX(0); }
+        }
+
+        .message h2 {
+            color:#9a56a8; font-size:1.3rem; margin-bottom:10px;
+        }
+        .message p {
+            color:#6d496f; line-height:1.9; font-size:1.04rem;
+        }
+        .heart { color:#ff6eb6; display:inline-block; animation: heartBeat 1.4s ease-in-out infinite; }
+        @keyframes heartBeat {
+            0%,100% { transform:scale(1); }
+            50% { transform:scale(1.2); }
+        }
+
+        .closing {
+            text-align:center; margin-top:30px; padding:24px 18px 10px;
+            background: rgba(255,255,255,0.28); border-radius:18px;
+        }
+        .closing p {
+            color:#7d4f7c; line-height:2; font-size:1.09rem; margin:8px 0;
+        }
+        .signature {
+            font-style:italic; color:#cd6d8d;
+        }
+        .glow {
+            text-shadow: 0 0 18px rgba(236, 111, 176, 0.35);
+        }
+
+        @media (max-width: 640px) {
+            .card { padding: 32px 18px; }
+            .message { padding: 16px 14px; }
+            .message p { font-size: 0.98rem; }
+        }
+    </style>
+</head>
+<body>
+    <div class="floating">
+        <div class="float-heart" style="top:8%; left:6%;">💖</div>
+        <div class="float-heart" style="top:18%; right:12%;">💗</div>
+        <div class="float-heart" style="top:42%; left:10%;">💕</div>
+        <div class="float-heart" style="top:58%; right:8%;">💝</div>
+        <div class="float-heart" style="top:75%; left:18%;">💞</div>
+        <div class="sparkle" style="top:14%; left:28%;">✨</div>
+        <div class="sparkle" style="top:34%; right:20%;">✨</div>
+        <div class="sparkle" style="top:66%; left:28%;">✨</div>
+        <div class="sparkle" style="top:80%; right:25%;">✨</div>
+    </div>
+
+    <div class="wrap">
+        <div class="card">
+            <div class="title">
+                <h1>Happy 17th Birthday</h1>
+                <p>To the one who deserves the world</p>
+            </div>
+            <div class="celebrate">🎉 ✨ 💕</div>
+
+            <div class="message">
+                <h2>🌸 Dear babe,</h2>
+                <p>Wishing you the happiest of birthdays! Cheers to 17! <span class="heart">🖤</span> May the world bless you with boundless happiness, love, strength, success, and everything beautiful you truly deserve.</p>
+            </div>
+
+            <div class="message">
+                <h2>🚀 Your dreams</h2>
+                <p>Seeing you grow, chase your dreams, smile endlessly, and become everything you've ever wanted to be means so much to me. Just like people say, “Aim high, to the sky,” your aim is actually the sky, and I’d be more than glad to watch you conquer it. For all the tireless efforts you’ve put into your dreams, I truly believe the success waiting for you will be far greater than you’ve ever imagined. I’ll forever be proud of you.</p>
+            </div>
+
+            <div class="message">
+                <h2>⚽ Your game</h2>
+                <p>To be honest, I’m a crazy fan of yours—especially of your game! After such a long time, it felt truly surreal to see you play in the CM Trophy. With or without your knowledge, I’ll always be immensely happy, even for your smallest wins. Seeing u at the top, achieving everything u’ve ever wanted to, will always be a part of my dreams n prayers.</p>
+            </div>
+
+            <div class="message">
+                <h2>💪 Your strength</h2>
+                <p>What I admire most about you is that you never stopped at simply dreaming. All those sleepless nights, the hard work, effort, dedication, and consistency you put into everything are genuinely inspiring. You’re strong, capable, and someone with so much potential to achieve things far beyond what you can imagine.</p>
+            </div>
+
+            <div class="message">
+                <h2>💖 Your worth</h2>
+                <p>You’re also someone so precious, rare, and worthy of being treasured. I hope you always know your worth and how special you are to me. I’m sure the person you are and everything you’re working towards will make your family proud someday.</p>
+            </div>
+
+            <div class="message">
+                <h2>🌷 Proud of you</h2>
+                <p>And in case no one has told you this, I’m incredibly proud of you—not just for what you achieve, but for all the effort and determination behind it. <span class="heart">🖤</span></p>
+            </div>
+
+            <div class="message">
+                <h2>💫 Healing and hope</h2>
+                <p>I’m truly sorry for everything that has happened between us, and for anything I may have done that hurt you. I genuinely hope that, with time, things become lighter and more peaceful for both of us. And if someday our paths find their way back to each other, I hope we’ll meet again with more understanding, maturity, patience, and a better version of ourselves. Until then, I’ll always wish you nothing but happiness and peace. <span class="heart">🖤</span></p>
+            </div>
+
+            <div class="closing">
+                <p class="glow">With or without you by my side, you’ll always be my everything.</p>
+                <p>Love you endlessly. <span class="heart">🖤</span></p>
+                <p class="signature">Hopefully waiting, until we find our ways back to each other.</p>
+                <p style="font-size:1.2rem; font-weight:700;">Happiest birthday, my world. ✨</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
